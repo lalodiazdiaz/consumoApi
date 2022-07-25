@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">consumoApi</string>
+    <string name="hint_id">Id</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_body">Body</string>
 </resources>
