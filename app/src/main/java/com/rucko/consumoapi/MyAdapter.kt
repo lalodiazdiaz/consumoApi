@@ -1,5 +1,6 @@
 package com.rucko.consumoapi
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,16 @@ class MyAdapter(private val myDataSet: ArrayList<Comentario>) :
             vista.txtName.text= c.name
             vista.txtEmail.text = c.email
             vista.txtBody.text=c.body
+
+            vista.setOnClickListener {
+                var intent = Intent(vista.context,Detalle::class.java)
+                intent.putExtra("Id",c.id)
+                intent.putExtra("Name",c.name)
+                intent.putExtra("Email",c.email)
+                intent.putExtra("Body",c.body)
+
+                vista.context.startActivity(intent)
+            }
         }
     }
 
